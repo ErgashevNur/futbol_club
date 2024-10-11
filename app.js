@@ -595,121 +595,104 @@ const teams = [
   },
 ];
 // 1
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Manager" || "manager" || "MANAGER") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id,teams[i].name,teams[i].manager);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
+function club() {
+  let a = prompt("Savolingizni kiriting");
 
-// 2
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Stadium" || "stadium" || "STADIUM") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].stadium);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 3
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "History" || "history" || "history") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].history);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 4
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Top scorer" || "top scorer" || "TOP SCORER") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].top_scorer);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 5
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Trophies " || "trophies" || "TROPHIES") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].trophies);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 6
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Foundet" || "founded" || "FOUNDED") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].founded);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 7
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "city" || "City" || "CITY") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].city);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 8
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Colors" || "colors" || "COLORS") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].colors);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 9
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Rivalries" || "rivalries" || "RIVALRIES") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].rivalries);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
-
-// 10
-// function club() {
-//   let a = prompt("Savolingizni kiriting");
-//   if (a == "Owner" || "owner" || "OWNER") {
-//     for (let i = 0; i < teams.length; i++) {
-//       console.log(teams[i].id, teams[i].name, teams[i].owner);
-//     }
-//     return a;
-//   }
-// }
-// console.log(club());
+  if (a == "Manager" || a == "manager" || a == "MANAGER") {
+    const managers = [];
+    for (let i = 0; i < teams.length; i++) {
+      managers.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        manager: teams[i].manager,
+      });
+    }
+    return managers;
+  } else if (a == "Owner" || a == "owner" || a == "OWNER") {
+    const owners = [];
+    for (let i = 0; i < teams.length; i++) {
+      owners.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        owner: teams[i].owner,
+      });
+    }
+    return owners;
+  } else if (a == "Stadium" || "stadium" || "STADIUM") {
+    const stadiums = [];
+    for (let i = 0; i < teams.length; i++) {
+      stadiums.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        stadium: teams[i].stadium,
+      });
+    }
+    return stadiums;
+  } else if (a == "History" || "history" || "history") {
+    const historys = [];
+    for (let i = 0; i < teams.length; i++) {
+      historys.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        history: teams[i].history,
+      });
+    }
+    return historys;
+  } else if (a == "Top scorer" || "top scorer" || "TOP SCORER") {
+    const topScorer = [];
+    for (let i = 0; i < teams.length; i++) {
+      topScorer({
+        id: teams[i].id,
+        name: teams[i].name,
+        top_scorer: teams[i].top_scorer,
+      });
+    }
+    return topScorer;
+  } else if (a == "Trophies" || "trophies" || "TROPHIES") {
+    const trophiess = [];
+    for (let i = 0; i < teams.length; i++) {
+      trophiess.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        trophies: teams[i].trophies,
+      });
+    }
+    return trophiess;
+  } else if (a == "Foundet" || "founded" || "FOUNDED") {
+    const foundeds = [];
+    for (let i = 0; i < teams.length; i++) {
+      foundeds.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        founded: teams[i].founded,
+      });
+    }
+    return foundeds;
+  } else if (a == "city" || "City" || "CITY") {
+    const citys = [];
+    for (let i = 0; i < teams.length; i++) {
+      citys.push({ id: teams[i].id, name: teams[i].name, city: teams[i].city });
+    }
+  } else if (a == "Colors" || "colors" || "COLORS") {
+    const colorss = [];
+    for (let i = 0; i < teams.length; i++) {
+      colors.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        colors: teams[i].colors,
+      });
+    }
+    return colorss;
+  } else if (a == "Rivalries" || "rivalries" || "RIVALRIES") {
+    const rivalriess = [];
+    for (let i = 0; i < teams.length; i++) {
+      rivalriess.push({
+        id: teams[i].id,
+        name: teams[i].name,
+        rivalries: teams[i].rivalries,
+      });
+    }
+    return rivalriess;
+  }
+}
+console.log(club());
